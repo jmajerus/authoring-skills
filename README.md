@@ -8,8 +8,9 @@ The skills an agent follows to write from the library through the Authoring MCP 
 | [portal-article](portal-article/SKILL.md) | A standalone essay through all six servers, rendered by iasp-mcp to HTML, Markdown, Ghost, PDF, and EPUB |
 | [cited-article](cited-article/SKILL.md) | An article or chapter that needs only the corpus and quote servers, built with local Pandoc |
 
-[scripts/check-draft.mjs](scripts/check-draft.mjs) is the one draft checker; each skill reaches it through a
-symlink in its own folder.
+[scripts/check-draft.mjs](scripts/check-draft.mjs) checks a cited-article draft, through a symlink in that
+skill's folder. portal-article needs no script: iasp-mcp compares every marked quote with the quote store and builds
+the bibliography when it validates and renders.
 
 ## Installing
 

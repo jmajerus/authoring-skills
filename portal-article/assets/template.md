@@ -3,7 +3,6 @@ title: "Title"
 subtitle: "One line that says what the essay argues"
 version: "0.1.0"
 lang: en
-bibliography: slug.bib
 link-citations: true
 corpus-project: slug
 ---

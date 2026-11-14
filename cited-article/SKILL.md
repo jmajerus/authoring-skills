@@ -66,8 +66,9 @@ page, the passage, a line of context either side, and why it fits.
 For each chosen passage:
 
 1. quote-mcp's `add_quote` with `work` = the book id (`main:42`), the text,
-   `page` = the page `read_book` reported (where the check starts looking;
-   the saved page comes from the book), `tags: ["project:<project>", <themes>]`,
+   `file_page` = the `file_page` `read_book` reported (the position in the
+   file, where the check starts looking; the printed page to cite,
+   `page_label`, comes back from the book), `tags: ["project:<project>", <themes>]`,
    `comment` = its role in the piece, and `request_id` = `<slug>-<n>`, so a
    retry doesn't save it twice. When nothing is saved, the error lists the
    closest passages: quote again from those; never save altered text. A
@@ -78,7 +79,7 @@ For each chosen passage:
    (corpus-mcp's record of the book: `book_id`, `citekey`, `citekey_source`,
    `zotero`), `editions`, and `warnings`.
 3. Once per book, corpus-mcp's `cite_passage` with `book.book_id` and the
-   same page, for the filing data: `bibtex`, `isbn`, `proposed_citekey`, and
+   same `file_page`, for the filing data: `bibtex`, `isbn`, `proposed_citekey`, and
    its `warnings`. If citing a Zotero edition, also obtain that edition's
    BibTeX record for the bibliography.
 4. Settle the citekey (below).
@@ -114,6 +115,9 @@ For each chosen passage:
     4. `pin_citekey` with the item's key. If no key was kept, pin
        `proposed_citekey` and set it on the item with `zotero_update_item`
        `fields: {citation_key: …}`.
+       `pin_citekey` completes the filing: its `zotero_state` is `matched`
+       once every server knows the book by its key. Otherwise `zotero_note`
+       says why; fix that and call it again with the same key.
     5. If writing fails, call `zotero_write_capabilities`, report what it
        says, and continue as `ask`.
   - `ask`: give the human the BibTeX for each book and wait. Then look the
