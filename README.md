@@ -11,6 +11,9 @@ The skills an agent follows to write from the library through the Authoring MCP 
 [scripts/check-draft.mjs](scripts/check-draft.mjs) is the one draft checker; each skill reaches it through a
 symlink in its own folder.
 
+[examples/cited-article/](examples/cited-article/) holds a finished cited-article piece with its saved quotes.
+`node --test tests/` runs the checker over each example.
+
 ## Installing
 
 Link each skill into `~/.claude/skills`:
