@@ -1,5 +1,5 @@
 // Each example is a draft the cited-article skill produced, with its quotes' saved text; the checker must pass it.
-// Run with `node --test tests/`. Needs pandoc on the PATH for the build step to count.
+// Run with `node --test`. Needs pandoc on the PATH for the build step to count.
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";

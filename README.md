@@ -12,7 +12,7 @@ The skills an agent follows to write from the library through the Authoring MCP 
 symlink in its own folder.
 
 [examples/cited-article/](examples/cited-article/) holds a finished cited-article piece with its saved quotes.
-`node --test tests/` runs the checker over each example.
+`node --test` runs the checker over each example.
 
 ## Installing
 
