@@ -160,8 +160,8 @@ add a fact from general knowledge, list it in the handover so the owner can chec
 
 - Put `<!-- quote <id> -->` on the line before every block quote, and before any paragraph
   that quotes inside a sentence. Concept tags may follow the id.
-- Use `cite_quote`'s `quote` text unchanged. To shorten one, save the shorter passage as a
-  new quote.
+- Use `cite_quote`'s `quote` text unchanged. You may quote a run of it, or runs joined by "…";
+  never change a word.
 - End a block quote with its citation on a final `>` line.
 
 **Citations** are Pandoc's: `[@key, p. 145]` for a printed page, `[@key, chap. 7]` for an
@@ -207,6 +207,9 @@ every marked quote with the saved one and reports each in `quotes.checks`:
 - `text: "differs"` shows the saved words and yours around the first difference. The draft
   is wrong, not the quote: restore the saved words. Curly or straight quotation marks, dash
   styles, and emphasis markers are not differences.
+- `text: "excerpt"` is a warning: your words are a run of the saved quote, or runs joined by
+  an ellipsis. That is allowed. Check that what you left out doesn't change the meaning, and
+  say in the footnote that the passage is shortened.
 - `citekey: "differs"` means the citation names a different work from the quote's.
 - `locator: "differs"` is a warning. Keep yours only if it says the same place in words a
   reader will prefer, such as a chapter title for a chapter number.
