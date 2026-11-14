@@ -12,6 +12,9 @@ The skills an agent follows to write from the library through the Authoring MCP 
 skill's folder. portal-article needs no script: iasp-mcp compares every marked quote with the quote store and builds
 the bibliography when it validates and renders.
 
+[examples/cited-article/](examples/cited-article/) holds a finished cited-article piece with its saved quotes.
+`node --test tests/` runs the checker over each example.
+
 ## Installing
 
 Link each skill into `~/.claude/skills`:
