@@ -13,7 +13,7 @@ skill's folder. portal-article needs no script: iasp-mcp compares every marked q
 the bibliography when it validates and renders.
 
 [examples/cited-article/](examples/cited-article/) holds a finished cited-article piece with its saved quotes.
-`node --test tests/` runs the checker over each example.
+`node --test` runs the checker over each example.
 
 ## Installing
 
