@@ -17,12 +17,17 @@ the bibliography when it validates and renders.
 
 ## Installing
 
-Link each skill into `~/.claude/skills`:
+See [INSTALLING.md](INSTALLING.md) for Claude Code, Codex, GitHub Copilot,
+Kilo Code, Cline, and ZCode, including the MCP and local tool prerequisites.
+The author's private Authoring MCP Portal exposes all six servers through one
+connection; access requires explicit authorization. You can deploy your own
+portal subject to the applicable project licenses.
 
-```bash
-ln -sfn "$PWD/portal-article" ~/.claude/skills/portal-article
-ln -sfn "$PWD/cited-article" ~/.claude/skills/cited-article
-```
+## License
+
+This repository is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE.md),
+matching the related server projects. The license does not grant access to the
+author's hosted services or rights to third-party works quoted in the examples.
 
 ## Keeping in step with the servers
 
