@@ -24,6 +24,11 @@ For a writer who does the writing themselves. Each hands back a report, and all 
 [shared/library.md](shared/library.md) is what these six have in common: the tools, the three kinds of holding,
 keys, and page numbers. Each skill folder reaches it through a `library.md` symlink.
 
+## Smaller models
+
+[LITE-MODELS.md](LITE-MODELS.md) records how the skills behave on smaller models, one section per model tested.
+[LITE-MODELS-PLAN.md](LITE-MODELS-PLAN.md) is the plan for local models that have not been tested yet.
+
 ## Checks
 
 [scripts/check-draft.mjs](scripts/check-draft.mjs) checks a cited-article draft, through a symlink in that

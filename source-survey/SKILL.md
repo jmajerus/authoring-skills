@@ -50,8 +50,12 @@ something a writer could build on.
 For every work that will appear in the brief, `find_work` with `key` set to its book id or
 citekey, for its holdings and `cannot_cite`.
 
-Keep the survey in proportion. About thirty tool calls is enough for a first brief; say what
-you did not look at and offer to go deeper where the person chooses.
+Keep the survey in proportion. About thirty tool calls is enough for a first brief. When that
+is not enough for everything, read fewer books before you skip a search: the quote searches
+for the neighbouring concepts and one `search_corpus` with `shelf` set for each of the two or
+three likeliest shelves come first, and the holdings check can be kept to the works whose
+passages you report. Say what you did not look at and offer to go deeper where the person
+chooses.
 
 ## 4. The brief
 

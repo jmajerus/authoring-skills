@@ -36,6 +36,9 @@ marked passage with the saved quote:
 - `text: "differs"` gives the saved words and the draft's around the first difference.
 - `text: "excerpt"` means the draft uses a run of the saved quote, or runs joined by an
   ellipsis. That is allowed; check that what was left out does not change the meaning.
+- For a quote inside a sentence, `differs` can also mean only that the draft uses part of the
+  saved quote. Compare by hand: if the draft's quoted words are an exact run of the saved
+  text, the verdict is excerpt.
 - `citekey: "differs"` and `locator: "differs"` compare the citation with the quote's own.
 - `unmarked_block_quotes` lists block quotes with no marker. Check those in step 3.
 
@@ -96,7 +99,9 @@ For each citation:
 
 ## 5. Attributions and paraphrases
 
-For a paraphrase, find the passage it rests on, as in step 3, and read it. Say whether the
+A sentence that only introduces the quotation after it is not a paraphrase to check; the
+quotation is its evidence. For a paraphrase that makes a claim of its own, find the passage
+it rests on, as in step 3, and read it. Say whether the
 passage supports the claim, supports something narrower, or says something else. If you
 cannot find a passage, say so; do not judge the claim from general knowledge.
 
@@ -106,7 +111,9 @@ nothing here checks them.
 
 ## 6. Report
 
-Start with the count: how many quotations and citations, and how many in each verdict. Then
+Start with the count, as a small table with one row per verdict and the number of quotations,
+citations, and paraphrases in each. Fill it in from your numbered list after the findings are
+written, so the two agree. Then
 the problems first, in draft order, each with its line, the draft's words, the source's words,
 and the source reported the way library.md describes. Then one line for each item that passed.
 Then what could not be checked and why.

@@ -46,6 +46,8 @@ them as `verified`.
   `search_quotes` with `holdings.quotes.work` returns none, try the `quote:<id>` from the
   work's `keys.quote`. Some works are known to the quote store only by that key.
 - A concept is `scheme:slug` (`human-work:blame`) on every server.
+- A quote's id is the `id` at the top of its result. `work.id` inside the same result is a
+  different number, the work's; never report it as the quote's.
 
 ## Two page numbers
 
@@ -64,6 +66,11 @@ cited by chapter, from `section`.
   stating a view or arguing against it.
 - A phrase search fails if one word differs. To find a passage whose wording you are unsure of,
   search for two or three short runs (four to six words) from different parts of it.
+- A `search_corpus` result does not say which shelf its book is on, and gives no total. To
+  learn whether a shelf has the topic, search again with `shelf` set. A `count` equal to your
+  `limit` means there may be more.
+- A common word alone ("blame") finds fiction, scripture, and software manuals. Pair it with a
+  second word, or use `shelf`, before reading anything.
 - `find_work` searches titles and creators, not subjects. A topic is found through
   `search_corpus` (what the books say), `search_quotes` (what was collected), and
   `list_concepts` (how the owner names it).
@@ -88,5 +95,10 @@ Give each passage the same four things, so the person can find it and knows what
 - its standing: verified, transcribed, or read and not saved
 - the id to pick it up with: the quote id, or the book id and `file_page`
 
+Words inside quotation marks are copied character for character from the tool's result. To
+shorten, mark every cut with "…". If you want to put it your own way, drop the quotation
+marks. A near-quote inside quotation marks is the one error the person cannot see.
+
 Keep your own summary of an author apart from their words, and say only what the passage you
-read supports. A fact from your general knowledge is labelled as that.
+read supports. Before a sentence that names two authors as holding the same view, check that
+each one's passage says it. A fact from your general knowledge is labelled as that.

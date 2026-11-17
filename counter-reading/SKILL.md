@@ -45,8 +45,9 @@ These sentences give you the words to search for.
 `search_corpus` for the vocabulary of each opposing sentence. Three things help:
 
 - `advanced: true` with `NEAR(blame accountability, 12)` finds the two ideas in one breath.
-- Search with `shelf` set to shelves away from the claim's home. A claim from the psychology
-  books may be answered from management, law, or literature. `list_shelves` names them.
+- Search with `shelf` set to shelves away from the claim's home, which is the shelf most of
+  its supporting passages come from. A claim from the psychology books may be answered from
+  management, law, or literature. `list_shelves` names them.
 - Search for the words of disagreement beside the topic: "but", "however" are too common to
   help, while "myth", "mistake", "in fact", "contrary" beside the topic word often find an
   author arguing.
@@ -55,7 +56,9 @@ These sentences give you the words to search for.
 
 `read_book` a page either side of every candidate. This step decides everything, because
 authors state a view in order to reject it, and a snippet cannot tell you which they are
-doing. Sort each passage:
+doing. You may set a candidate aside on its snippet only when the word is plainly used in
+another sense; a snippet that looks as if it agrees with the claim is still read, and any
+candidate you did not read is listed as unread in the report. Sort each passage:
 
 | Standing | Means |
 |---|---|
