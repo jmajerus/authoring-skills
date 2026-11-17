@@ -39,6 +39,10 @@ the bibliography when it validates and renders.
 `node --test` runs the checker over each example, and checks that every skill folder has a well-formed `SKILL.md`
 whose links resolve.
 
+[tools-used.json](tools-used.json) lists the MCP tools the skills call, by service. The suite's ops server
+(authoring-ops-mcp) reads it and reports when a service stops listing one. When a skill starts or stops calling
+a tool, change the list in the same commit; `node --test` checks that every tool listed is named in a skill.
+
 ## Installing
 
 See [INSTALLING.md](INSTALLING.md) for Claude Code, Codex, GitHub Copilot,
