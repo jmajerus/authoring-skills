@@ -17,6 +17,9 @@ agents need the files and dependencies in the environment where the agent runs.
   also uses zotero. Node.js runs its draft checker; Pandoc with citeproc is
   needed for automated checking and formatted output. See the skill for its
   fallback when Pandoc is unavailable.
+- The research aids (`source-survey`, `draft-check`, `quote-harvest`,
+  `concept-dossier`, `counter-reading`, `reading-gaps`) use holdings, corpus,
+  quote, and terminology; `draft-check` also uses iasp. They need no local tools.
 - The agent needs access to the skill files, the relevant MCP tools, and, for
   local checking, permission to run the commands and read the draft files.
 
@@ -53,7 +56,8 @@ necessarily this repository. Paths and features may vary with host versions.
 
 ## Link the checkout
 
-On macOS or Linux, the following commands install both skills for Claude Code.
+On macOS or Linux, the following commands install every skill for Claude Code;
+shorten the list to install only some.
 Run them **from the root of this checkout**. To use another host or project
 scope, replace the `skill_dir` value with the matching directory from the
 table; use an absolute path for a project directory.
@@ -61,7 +65,8 @@ table; use an absolute path for a project directory.
 ```bash
 skill_dir="$HOME/.claude/skills"
 mkdir -p "$skill_dir"
-for skill in portal-article cited-article; do
+for skill in portal-article cited-article source-survey draft-check \
+  quote-harvest concept-dossier counter-reading reading-gaps; do
   if [ -e "$skill_dir/$skill" ] || [ -L "$skill_dir/$skill" ]; then
     printf 'Already exists: %s\n' "$skill_dir/$skill"
   else
@@ -83,13 +88,15 @@ Skills, choosing either a link or a copy and a global or project target.
 
 ## Copy instead of linking
 
-Copy the complete `portal-article` and `cited-article` directories into the
-chosen skills directory, preserving their names. **Do not copy only
-`SKILL.md`.** In this checkout, `cited-article/check-draft.mjs` is a relative
-symlink to `../scripts/check-draft.mjs`. A copied skill folder alone leaves that
-link broken. Replace the copied link with the actual
-`scripts/check-draft.mjs` file from this checkout at
-`cited-article/check-draft.mjs`. Include the templates and assets too. Copies
+Copy the complete skill directories into the chosen skills directory, preserving
+their names. **Do not copy only `SKILL.md`.** Two files in this checkout are
+relative symlinks, and a copied skill folder alone leaves them broken:
+
+- `cited-article/check-draft.mjs` links to `../scripts/check-draft.mjs`.
+- `library.md` in each research aid's folder links to `../shared/library.md`.
+
+Replace each copied link with the actual file it points to (`cp -rL` does this
+while copying). Include the templates and assets too. Copies
 do not receive updates automatically; repeat the copy after updating the checkout.
 This also applies to import tools that copy the skill directory.
 
@@ -104,7 +111,8 @@ This also applies to import tools that copy the skill directory.
 3. Ask the agent to list the relevant MCP tools. If they are missing, check the
    portal connection and authentication in that host.
 4. For `cited-article`, check that `check-draft.mjs` resolves and that `node`
-   and `pandoc` are available in the agent's execution environment.
+   and `pandoc` are available in the agent's execution environment. For a
+   research aid, check that `library.md` in its folder opens.
 
 If a skill is missing, check the scope, exact directory names and `SKILL.md`
 locations, then reload. Check for duplicate names in another scope or disabled
