@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Supper with the Enemy</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+} </style>
+  <style type="text/css">
+@namespace epub "http://www.idpf.org/2007/ops";
+
+[epub|type~="part"] {
+text-align: center;
+margin-top: 2.5em;
+margin-bottom: 2em;
+}
+[epub|type~="part"] h1,
+[epub|type~="part"] h2 {
+margin-top: 0;
+margin-bottom: 0.4em;
+font-size: 1.6em;
+}
+[epub|type~="part"] h3 {
+font-size: 1.1em;
+font-weight: normal;
+color: #555;
+margin-top: 0.2em;
+}
+
+h1[epub|type~="chapter"],
+h2[epub|type~="chapter"] {
+font-size: 1.4em;
+margin-top: 2em;
+margin-bottom: 0.6em;
+text-align: left;
+}
+h2[epub|type~="subchapter"],
+h3[epub|type~="subchapter"] {
+font-size: 1.2em;
+margin-top: 1.4em;
+margin-bottom: 0.5em;
+}
+
+[epub|type~="epigraph"] {
+margin: 1.8em 10%;
+font-style: italic;
+text-align: right;
+}
+[epub|type~="epigraph"] p {
+margin-bottom: 0.6em;
+}
+[epub|type~="epigraph"] .attribution {
+font-style: normal;
+font-size: 0.9em;
+color: #555;
+}
+[epub|type~="epigraph-inline"] {
+margin: 1.2em 12%;
+font-style: italic;
+text-align: right;
+opacity: 0.9;
+}
+[epub|type~="epigraph-inline"] p {
+margin-bottom: 0.4em;
+}
+
+[epub|type~="aside"] {
+border: 1.5px solid rgba(0, 0, 0, 0.14);
+border-left-width: 4px;
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.022);
+padding: 1.1em 1.2em;
+margin: 1.2em 0;
+font-size: 0.95em;
+line-height: 1.45;
+page-break-before: auto !important;
+break-before: auto !important;
+page-break-after: auto !important;
+break-after: auto !important;
+page-break-inside: auto;
+break-inside: auto;
+position: relative;
+}
+[epub|type~="aside"]::after {
+content: "";
+position: absolute;
+inset: 0.5em;
+border: 1px dashed rgba(0, 0, 0, 0.05);
+border-radius: 8px;
+pointer-events: none;
+}
+[epub|type~="aside"] + [epub|type~="aside"] {
+margin-top: 1.8em;
+}
+[epub|type~="aside"] h3 {
+margin-top: 0;
+margin-bottom: 0.3em;
+font-size: 0.95em;
+font-weight: 600;
+letter-spacing: 0.03em;
+}
+[epub|type~="aside"] .sidebar-badge,
+[epub|type~="sidebar-inline"] .sidebar-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.35em;
+font-size: 0.72em;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+font-weight: 600;
+border-radius: 999px;
+padding: 0.16em 0.62em 0.12em 0.52em;
+background-color: rgba(0, 0, 0, 0.065);
+color: #333;
+margin: 0;
+}
+
+.sidebar-badge-row,
+.box-badge-row {
+margin: 0 0 0.25em 0;
+line-height: 1.2;
+}
+.sidebar-badge-row + h2,
+.sidebar-badge-row + h3,
+.sidebar-badge-row + p,
+.box-badge-row + h2,
+.box-badge-row + h3,
+.box-badge-row + p {
+margin-top: 0.15em;
+}
+
+.box-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.35em;
+font-size: 0.72em;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+font-weight: 600;
+border-radius: 999px;
+padding: 0.16em 0.62em 0.12em 0.52em;
+background-color: rgba(0, 0, 0, 0.08);
+color: #333;
+margin: 0;
+}
+.box-badge__label {
+font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+letter-spacing: 0.08em;
+}
+.sidebar-badge__glyph {
+font-size: 1em;
+}
+.sidebar-badge__label {
+font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+letter-spacing: 0.08em;
+}
+[epub|type~="sidebar-inline"] .sidebar-inline-glyph {
+font-size: 0.95em;
+margin-right: 0.35em;
+display: inline-block;
+}
+[epub|type~="sidebar-inline"] .sidebar-inline-glyph--block {
+display: inline-flex;
+margin-right: 0;
+margin-bottom: 0.35em;
+}
+[epub|type~="sidebar-inline"] {
+border-left: 3px solid #b3b3b3;
+background-color: rgba(0, 0, 0, 0.012);
+padding: 0.45em 0.9em;
+margin: 0.8em 0;
+font-size: 0.95em;
+line-height: 1.4;
+}
+[epub|type~="callout"] {
+border-left: 2px solid #bbb;
+background-color: rgba(0, 0, 0, 0.02);
+padding: 0.6em 0.9em;
+margin: 1em 0;
+font-size: 0.95em;
+line-height: 1.4;
+font-style: italic;
+}
+
+[epub|type~="note"] {
+--note-border-color: #e6c35a;
+--note-background-color: #fff9ed;
+--note-marker-color: #8a5a00;
+--note-marker-bg: rgba(230, 195, 90, 0.18);
+border-left: 3px solid var(--note-border-color, #e6c35a);
+background-color: var(--note-background-color, #fff9ed);
+padding: 0.55em 1em 0.85em;
+margin: 1.1em 0;
+font-size: 0.95em;
+line-height: 1.4;
+}
+
+[epub|type~="note"] > :first-child {
+margin-top: 0;
+}
+[epub|type~="note"] > h2:first-child,
+[epub|type~="note"] > h3:first-child,
+[epub|type~="note"] > h4:first-child,
+[epub|type~="note"] > h5:first-child,
+[epub|type~="note"] > h6:first-child {
+margin-top: 0.15em;
+}
+[epub|type~="note"].warning {
+--note-border-color: #c05621;
+--note-background-color: #fff1e6;
+--note-marker-color: #8c2f00;
+--note-marker-bg: rgba(192, 86, 33, 0.18);
+}
+[epub|type~="note"].contrast {
+--note-border-color: #7e3af2;
+--note-background-color: #f4ebff;
+--note-marker-color: #4c1d95;
+--note-marker-bg: rgba(126, 58, 242, 0.16);
+}
+[epub|type~="note"].transition {
+--note-border-color: #2563eb;
+--note-background-color: #eaf2ff;
+--note-marker-color: #1e3a8a;
+--note-marker-bg: rgba(37, 99, 235, 0.16);
+}
+[epub|type~="note"].navigation {
+--note-border-color: #0f6b75;
+--note-background-color: #e6f6f7;
+--note-marker-color: #084a52;
+--note-marker-bg: rgba(15, 107, 117, 0.16);
+}
+[epub|type~="note"].bridge {
+--note-border-color: #6f58b9;
+--note-background-color: #f4f0ff;
+--note-marker-color: #4a3792;
+--note-marker-bg: rgba(111, 88, 185, 0.17);
+}
+[epub|type~="note"].usage {
+--note-border-color: #3b6ea8;
+--note-background-color: #eef4fa;
+--note-marker-color: #1f3f66;
+--note-marker-bg: rgba(59, 110, 168, 0.16);
+}
+[epub|type~="note"].integration {
+--note-border-color: #0f766e;
+--note-background-color: #e8f7f6;
+--note-marker-color: #0b4f4a;
+--note-marker-bg: rgba(15, 118, 110, 0.16);
+}
+[epub|type~="note"].responsibility {
+--note-border-color: #b45309;
+--note-background-color: #fff4e6;
+--note-marker-color: #7c2d12;
+--note-marker-bg: rgba(180, 83, 9, 0.16);
+}
+[epub|type~="note"].reflexive {
+--note-border-color: #64748b;
+--note-background-color: #eff2f7;
+--note-marker-color: #334155;
+--note-marker-bg: rgba(100, 116, 139, 0.16);
+}
+[epub|type~="note"].synthesis {
+--note-border-color: #2f855a;
+--note-background-color: #e7f7ef;
+--note-marker-color: #1b5e3c;
+--note-marker-bg: rgba(47, 133, 90, 0.16);
+}
+[epub|type~="note"].disclosure {
+--note-border-color: #a855f7;
+--note-background-color: #f5edff;
+--note-marker-color: #6b21a8;
+--note-marker-bg: rgba(168, 85, 247, 0.16);
+}
+[epub|type~="note"].misuse {
+--note-border-color: #b42318;
+--note-background-color: #ffecea;
+--note-marker-color: #7a120c;
+--note-marker-bg: rgba(180, 35, 24, 0.18);
+}
+[epub|type~="note"].diagnostic {
+--note-border-color: #2454c6;
+--note-background-color: #e7f0ff;
+--note-marker-color: #17337a;
+--note-marker-bg: rgba(36, 84, 198, 0.18);
+}
+[epub|type~="note"].closing {
+--note-border-color: #475467;
+--note-background-color: #f5f7fb;
+--note-marker-color: #2f3949;
+--note-marker-bg: rgba(71, 84, 103, 0.16);
+}
+[epub|type~="note"].methodology {
+--note-border-color: #5046e5;
+--note-background-color: #eef0ff;
+--note-marker-color: #312e81;
+--note-marker-bg: rgba(80, 70, 229, 0.16);
+}
+[epub|type~="note"].context {
+--note-border-color: #4a5568;
+--note-background-color: #f0f4f8;
+--note-marker-color: #2d3748;
+--note-marker-bg: rgba(74, 85, 104, 0.16);
+}
+[epub|type~="note"].scope {
+--note-border-color: #92400e;
+--note-background-color: #fef3e2;
+--note-marker-color: #78350f;
+--note-marker-bg: rgba(146, 64, 14, 0.16);
+}
+[epub|type~="note"].checklist {
+--note-border-color: #0d9488;
+--note-background-color: #ccfbf1;
+--note-marker-color: #115e59;
+--note-marker-bg: rgba(13, 148, 136, 0.16);
+}
+[epub|type~="note"].prelude {
+--note-border-color: #9ca3af;
+--note-background-color: #f9fafb;
+--note-marker-color: #4b5563;
+--note-marker-bg: rgba(156, 163, 175, 0.16);
+}
+[epub|type~="note"].orientation {
+--note-border-color: #0f6b75;
+--note-background-color: #e6f6f7;
+--note-marker-color: #084a52;
+--note-marker-bg: rgba(15, 107, 117, 0.16);
+}
+[epub|type~="note"].ai {
+--note-border-color: #2563eb;
+--note-background-color: #eef6ff;
+--note-marker-color: #1d4ed8;
+--note-marker-bg: rgba(37, 99, 235, 0.16);
+}
+[epub|type~="note"].idea,
+[epub|type~="note"].insight {
+--note-border-color: #d9a300;
+--note-background-color: #fff6d1;
+}
+[epub|type~="note"].breadcrumb {
+--note-border-color: #1d5671;
+--note-background-color: #eef5fb;
+--note-marker-color: #153a4a;
+--note-marker-bg: rgba(29, 86, 113, 0.16);
+}
+[epub|type~="example"] {
+border-left: 3px solid #2f80ed;
+background-color: #e8f1ff;
+padding: 0.75em 1em;
+margin: 1.1em 0;
+font-size: 0.95em;
+line-height: 1.4;
+}
+[epub|type~="definition"] {
+border-left: 3px solid #1b7f4d;
+background-color: #e6f7ef;
+padding: 0.75em 1em;
+margin: 1.1em 0;
+font-size: 0.95em;
+line-height: 1.4;
+font-weight: 500;
+}
+
+[epub|type~="frontmatter"] h1,
+[epub|type~="frontmatter"] h2 {
+text-align: center;
+}
+[epub|type~="backmatter"] h1,
+[epub|type~="backmatter"] h2 {
+text-align: left;
+}
+
+h1[epub|type~="appendix"],
+h2[epub|type~="appendix"] {
+font-size: 1.3em;
+margin-top: 2em;
+margin-bottom: 0.6em;
+text-align: left;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+
+.epigraph {
+margin: 2em 1em;
+padding-left: 1.5em;
+font-style: italic;
+font-size: 0.95em;
+border-left: 3px solid #999;
+}
+.epigraph p {
+margin: 0.6em 0;
+}
+
+img {
+display: block;
+margin: 1em auto;
+max-width: 100%;
+height: auto;
+}
+hr {
+border: none;
+border-top: 1px solid #ccc;
+margin: 1.5em 0;
+}
+hr.catalog-divider {
+border: none;
+border-top: 1px solid #999;
+margin: 1.5em 0;
+width: 100%;
+}
+
+.table table {
+width: 100%;
+border-collapse: collapse;
+font-size: 0.95em;
+}
+.table th,
+.table td {
+padding: 0.52em 0.68em;
+vertical-align: top;
+}
+.table-compact table {
+font-size: 0.88em;
+}
+.table-compact th,
+.table-compact td {
+padding: 0.3em 0.45em;
+}
+.table-striped table tbody tr:nth-child(even) {
+background: rgba(0, 0, 0, 0.05);
+}
+.table-bordered table,
+.table-bordered th,
+.table-bordered td {
+border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.table-bordered table {
+border-collapse: collapse;
+}
+
+blockquote {
+margin: 1.2em 0;
+padding: 0.85em 1.2em;
+border-left: 4px solid #d0d7de;
+background-color: rgba(0, 0, 0, 0.03);
+color: #222;
+}
+[epub|type~="aside"] blockquote,
+[epub|type~="sidebar-inline"] blockquote {
+border-left-color: rgba(0, 0, 0, 0.18);
+background-color: rgba(0, 0, 0, 0.045);
+}
+blockquote > :first-child {
+margin-top: 0;
+}
+blockquote > :last-child {
+margin-bottom: 0;
+}
+
+.footnote-ref {
+font-size: 0.8em;
+vertical-align: super;
+text-decoration: none;
+margin-left: 0.1em;
+}
+.footnotes,
+.doc-endnotes {
+border-top: 1px solid #d0d7de;
+margin-top: 1.8em;
+padding-top: 1em;
+font-size: 0.9em;
+line-height: 1.4;
+}
+.footnotes ol,
+.doc-endnotes ol {
+margin: 0.6em 0 0 1.4em;
+padding: 0;
+}
+.footnotes li,
+.doc-endnotes li {
+margin-bottom: 0.7em;
+}
+.footnote-back {
+font-size: 0.75em;
+margin-right: 0.35em;
+text-decoration: none;
+}</style>
+  <style type="text/css">@namespace epub "http://www.idpf.org/2007/ops";html, body {margin: 0;padding: 0;}body {font-family: "Georgia", "Times New Roman", serif;line-height: 1.4;font-size: 1rem;padding: 0.8em 0.9em;}p {margin: 0 0 0.8em 0;}h1, h2, h3, h4 {font-family: "Georgia", "Times New Roman", serif;font-weight: bold;line-height: 1.2;margin: 1.2em 0 0.4em 0;}.section-heading-glyph {display: inline-block;width: 1.4ch;margin-left: -1.4ch;margin-right: 0.4ch;text-align: right;opacity: 0.85;}.catalog-collection-heading .section-heading-glyph,.section-heading-glyph.collection-heading-glyph {width: 2.05ch;margin-left: -2.05ch;margin-right: 0.55ch;font-size: 1.1em;}a {text-decoration: none;}a:link,a:visited {color: #0044aa;}a:hover,a:active {text-decoration: underline;}[epub|type~="part"] {break-before: page;page-break-before: always; text-align: center;margin-top: 40%;margin-bottom: 40%;}[epub|type~="part"] h1 {font-size: 1.8em;margin-bottom: 0.4em;}[epub|type~="part"] h2 {font-size: 1.4em;margin-bottom: 0.3em;}[epub|type~="part"] h3 {font-size: 1.1em;font-weight: normal;color: #555;}h1[epub|type~="chapter"] {break-before: page;page-break-before: always;font-size: 1.6em;margin-top: 25%;margin-bottom: 0.6em;text-align: left;}h1[epub|type~="chapter"] span.chapter-number {text-transform: uppercase;letter-spacing: 0.08em;font-size: 0.9em;}h2[epub|type~="subchapter"] {font-size: 1.2em;margin-top: 2em;margin-bottom: 0.5em;}[epub|type~="epigraph"] {margin: 2em 10%;font-style: italic;text-align: right;}[epub|type~="epigraph"] p {margin-bottom: 0.5em;}[epub|type~="epigraph"] .attribution {font-style: normal;font-size: 0.9em;color: #555;}[epub|type~="aside"] {border-left: 4px solid #888;background-color: rgba(0, 0, 0, 0.04);padding: 0.8em 1em;margin: 1.5em 0;}[epub|type~="aside"] h2,[epub|type~="aside"] h3 {margin-top: 0;font-size: 1em;text-transform: uppercase;letter-spacing: 0.06em;}[epub|type~="bridge"] {border-left: 4px solid #6f58b9;border-right: 4px solid #6f58b9;background-color: #f6f2ff;padding: 1.3em 1.4em;margin: 2.2em 0;border-radius: 6px;}[epub|type~="bridge"] h2,[epub|type~="bridge"] h3 {margin-top: 0;text-transform: uppercase;letter-spacing: 0.08em;font-size: 1.05em;}[epub|type~="bridge"] p {margin-bottom: 0.85em;}[epub|type~="bridge"] p:last-child {margin-bottom: 0;}[epub|type~="note"],[epub|type~="example"],[epub|type~="definition"] {padding: 0.9em 1em;margin: 1.4em 0;border-radius: 0 6px 6px 0;}[epub|type~="note"] {--note-border-color: #e6c35a;--note-background-color: #fff9ed;--note-marker-color: #8a5a00;--note-marker-bg: rgba(230, 195, 90, 0.18);border-left: 4px solid var(--note-border-color, #e6c35a);background-color: var(--note-background-color, #fff9ed);padding-top: 0.55em;padding-bottom: 0.85em;}[epub|type~="note"] > :first-child {margin-top: 0;}[epub|type~="note"] > h2:first-child,[epub|type~="note"] > h3:first-child,[epub|type~="note"] > h4:first-child,[epub|type~="note"] > h5:first-child,[epub|type~="note"] > h6:first-child {margin-top: 0.15em;}[epub|type~="note"].idea,[epub|type~="note"].insight {--note-border-color: #d9a300;--note-background-color: #fff6d5;}[epub|type~="note"].warning {--note-border-color: #c05621;--note-background-color: #fff1e6;--note-marker-color: #8c2f00;--note-marker-bg: rgba(192, 86, 33, 0.18);}[epub|type~="note"].contrast {--note-border-color: #7e3af2;--note-background-color: #f4ebff;--note-marker-color: #4c1d95;--note-marker-bg: rgba(126, 58, 242, 0.16);}[epub|type~="note"].transition {--note-border-color: #2563eb;--note-background-color: #eaf2ff;--note-marker-color: #1e3a8a;--note-marker-bg: rgba(37, 99, 235, 0.16);}[epub|type~="note"].navigation {--note-border-color: #0f6b75;--note-background-color: #e6f6f7;--note-marker-color: #084a52;--note-marker-bg: rgba(15, 107, 117, 0.16);}[epub|type~="note"].bridge {--note-border-color: #6f58b9;--note-background-color: #f4f0ff;--note-marker-color: #4a3792;--note-marker-bg: rgba(111, 88, 185, 0.17);}[epub|type~="note"].usage {--note-border-color: #3b6ea8;--note-background-color: #eef4fa;--note-marker-color: #1f3f66;--note-marker-bg: rgba(59, 110, 168, 0.16);}[epub|type~="note"].integration {--note-border-color: #0f766e;--note-background-color: #e8f7f6;--note-marker-color: #0b4f4a;--note-marker-bg: rgba(15, 118, 110, 0.16);}[epub|type~="note"].responsibility {--note-border-color: #b45309;--note-background-color: #fff4e6;--note-marker-color: #7c2d12;--note-marker-bg: rgba(180, 83, 9, 0.16);}[epub|type~="note"].reflexive {--note-border-color: #64748b;--note-background-color: #eff2f7;--note-marker-color: #334155;--note-marker-bg: rgba(100, 116, 139, 0.16);}[epub|type~="note"].synthesis {--note-border-color: #2f855a;--note-background-color: #e7f7ef;--note-marker-color: #1b5e3c;--note-marker-bg: rgba(47, 133, 90, 0.16);}[epub|type~="note"].disclosure {--note-border-color: #a855f7;--note-background-color: #f5edff;--note-marker-color: #6b21a8;--note-marker-bg: rgba(168, 85, 247, 0.16);}[epub|type~="note"].misuse {--note-border-color: #b42318;--note-background-color: #ffecea;--note-marker-color: #7a120c;--note-marker-bg: rgba(180, 35, 24, 0.18);}[epub|type~="note"].diagnostic {--note-border-color: #2454c6;--note-background-color: #e7f0ff;--note-marker-color: #17337a;--note-marker-bg: rgba(36, 84, 198, 0.18);}[epub|type~="note"].closing {--note-border-color: #475467;--note-background-color: #f5f7fb;--note-marker-color: #2f3949;--note-marker-bg: rgba(71, 84, 103, 0.16);}[epub|type~="note"].breadcrumb {--note-border-color: #1d5671;--note-background-color: #eef5fb;--note-marker-color: #153a4a;--note-marker-bg: rgba(29, 86, 113, 0.16);}[epub|type~="note"].methodology {--note-border-color: #5046e5;--note-background-color: #eef0ff;--note-marker-color: #312e81;--note-marker-bg: rgba(80, 70, 229, 0.16);}[epub|type~="note"].context {--note-border-color: #4a5568;--note-background-color: #f0f4f8;--note-marker-color: #2d3748;--note-marker-bg: rgba(74, 85, 104, 0.16);}[epub|type~="note"].scope {--note-border-color: #92400e;--note-background-color: #fef3e2;--note-marker-color: #78350f;--note-marker-bg: rgba(146, 64, 14, 0.16);}[epub|type~="note"].checklist {--note-border-color: #0d9488;--note-background-color: #ccfbf1;--note-marker-color: #115e59;--note-marker-bg: rgba(13, 148, 136, 0.16);}[epub|type~="note"].prelude {--note-border-color: #9ca3af;--note-background-color: #f9fafb;--note-marker-color: #4b5563;--note-marker-bg: rgba(156, 163, 175, 0.16);}[epub|type~="note"].orientation {--note-border-color: #0f6b75;--note-background-color: #e6f6f7;--note-marker-color: #084a52;--note-marker-bg: rgba(15, 107, 117, 0.16);}[epub|type~="note"].ai {--note-border-color: #2563eb;--note-background-color: #eef6ff;--note-marker-color: #1d4ed8;--note-marker-bg: rgba(37, 99, 235, 0.16);}[epub|type~="example"] {border-left: 4px solid #2f80ed;background-color: #e8f1ff;}[epub|type~="definition"] {border-left: 4px solid #1b7f4d;background-color: #e6f7ef;}[epub|type~="note"]::before,[epub|type~="example"]::before,[epub|type~="definition"]::before {display: block;font-size: 0.85em;letter-spacing: 0.08em;text-transform: uppercase;font-weight: 600;color: #5f4100;margin-bottom: 0.2em;}[epub|type~="note"]::before {content: "✦";display: inline-flex;align-items: center;justify-content: center;width: 1.7em;height: 1.7em;border-radius: 999px;background-color: var(--glyph-marker-background,var(--note-marker-bg, rgba(230, 195, 90, 0.18)));font-size: 1.05em;line-height: 1;font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;color: var(--note-marker-color, #8a5a00);margin-bottom: 0.22em;letter-spacing: 0;text-transform: none;font-weight: 500;}[epub|type~="example"]::before {content: "Example";color: #1a4d8d;}[epub|type~="definition"]::before {content: "Definition";color: #125436;}[epub|type~="note"].idea::before {content: "💡";display: inline-flex;width: auto;height: auto;background: none;margin-bottom: 0;margin-right: 0.4em;}[epub|type~="note"].insight::before {content: "⁂";display: inline-flex;align-items: center;justify-content: center;width: auto;height: auto;background: none;margin: 0 0.4em 0 0;font-size: 1.05em;color: #7a4ac4;vertical-align: baseline;}[epub|type~="note"].insight.major::before {display: inline-flex;align-items: center;justify-content: center;width: 2.05em;height: 2.05em;border-radius: 999px;background-color: var(--glyph-marker-background, rgba(122, 74, 196, 0.15));margin: 0 0 0.2em 0;font-weight: 600;}[epub|type~="insight"],[epub|type~="insight"] [epub|type] {border-left: 3px solid #6a3fb3;background-color: #f7f1ff;padding: 0.8em 1em;margin: 1.3em 0;border-radius: 6px;}[epub|type~="insight"]::before {content: "⁂";display: inline-flex;align-items: center;justify-content: center;margin: 0 0.45em 0 0;font-size: 1.05em;color: #6a3fb3;vertical-align: baseline;}[epub|type~="insight"] h2,[epub|type~="insight"] h3 {margin-top: 0.4em;}[epub|type~="insight"][epub|type~="major"] {border-left-width: 4px;background-color: #efe3ff;}[epub|type~="insight"][epub|type~="major"]::before {content: "⁂";display: inline-flex;align-items: center;justify-content: center;width: 2.05em;height: 2.05em;border-radius: 999px;background-color: var(--glyph-marker-background, rgba(106, 63, 179, 0.15));font-weight: 600;margin: 0 0 0.4em 0;}[epub|type~="note"].breadcrumb::before {content: "➤";}[epub|type~="note"].contrast::before {content: "⇆";}[epub|type~="note"].transition::before {content: "⇥";}[epub|type~="note"].navigation::before {content: "⇢";}[epub|type~="note"].bridge::before {content: "⟷";}[epub|type~="note"].usage::before {content: "⚙";}[epub|type~="note"].integration::before {content: "∞";}[epub|type~="note"].responsibility::before {content: "⚖";}[epub|type~="note"].reflexive::before {content: "⟲";}[epub|type~="note"].synthesis::before {content: "⊕";}[epub|type~="note"].disclosure::before {content: "◊";}[epub|type~="note"].misuse::before {content: "✕";}[epub|type~="note"].diagnostic::before {content: "🔍";}[epub|type~="note"].closing::before {content: "∎";}[epub|type~="note"].warning::before {content: "⚠️";}[epub|type~="note"].methodology::before {content: "⊢";}[epub|type~="note"].context::before {content: "◉";}[epub|type~="note"].scope::before {content: "◎";}[epub|type~="note"].checklist::before {content: "☐";}[epub|type~="note"].prelude::before {content: "◈";}[epub|type~="note"].orientation::before {content: "⇢";}[epub|type~="note"].ai::before {content: "◇";}[epub|type~="frontmatter"] h1,[epub|type~="frontmatter"] h2 {text-align: center;}[epub|type~="backmatter"] h1,[epub|type~="backmatter"] h2 {text-align: left;}h1[epub|type~="appendix"] {break-before: page;page-break-before: always;font-size: 1.4em;margin-top: 25%;margin-bottom: 0.6em;text-align: left;text-transform: uppercase;letter-spacing: 0.05em;}[epub|type~="appendix"] p {margin-bottom: 0.7em;}.page-break,.pagebreak {display: block;break-before: page !important;page-break-before: always !important;margin: 0;padding: 0;border: 0;height: 0;}img {display: block;margin: 1em auto;max-width: 100%;height: auto;}hr {border: none;border-top: 1px solid #ccc;margin: 1.5em 0;}hr.catalog-divider {border: none;border-top: 1px solid #999;margin: 1.5em 0;width: 100%;}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Supper with the Enemy</h1>
+<p class="subtitle">What the last book of the Iliad knows about the
+opposite of conflict</p>
+</header>
+<section id="supper-with-the-enemy" class="article">
+<h1>Supper with the Enemy</h1>
+<h3 id="what-the-last-book-of-the-iliad-knows-about-the-opposite-of-conflict">What
+the last book of the <em>Iliad</em> knows about the opposite of
+conflict</h3>
+<p>The <em>Iliad</em> announces its subject in its first word. In Robert
+Fagles’s translation:</p>
+<!-- quote 755 human-work:conflict human-work:rage -->
+<div class="iasp-quote" data-quote-id="755" data-citekey="homer1990iliad" data-work-key="zotero:users/827407/XPBXZ45R" data-concepts="human-work:conflict human-work:rage" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:rage" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/rage" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:rage" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>Rage–Goddess, sing the rage of Peleus’ son Achilles, murderous,
+doomed, that cost the Achaeans countless losses, hurling down to the
+House of Death so many sturdy souls, great fighters’ souls, but made
+their bodies carrion, feasts for the dogs and birds, and the will of
+Zeus was moving towards its end. Begin, Muse, when the two first broke
+and clashed, Agamemnon lord of men and brilliant Achilles.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+<span class="citation" data-cites="homer1990iliad">(<a href="#ref-homer1990iliad" role="doc-biblioref">Homer
+1990</a>)</span></p>
+</blockquote>
+</div>
+<p>Those lines seem to promise a poem that ends when the rage wins.
+Simone Weil’s essay on the poem is called <em>The Iliad, or the Poem of
+Force</em> <span class="citation" data-cites="weil1956iliad">(<a href="#ref-weil1956iliad" role="doc-biblioref">Weil 1956</a>)</span>,
+and the title is fair to most of it. But twenty-four books later Troy is
+still standing and the poem closes on a funeral. Just before the funeral
+it puts a supper between two men who have every reason to kill each
+other. This essay takes that ending as a claim about what the opposite
+of conflict is.</p>
+<div class="note context" epub:type="note" data-iasp-delivery="note" data-iasp-modifiers="context" data-iasp-concepts="urn:iasp:concept:note urn:iasp:concept:context" data-iasp-terms="https://vocabulary.majerus.us/api/schemes/iasp/slugs/note https://vocabulary.majerus.us/api/schemes/iasp/slugs/context" vocab="http://www.w3.org/2004/02/skos/core#" typeof="Concept" resource="urn:iasp:concept:context" data-concepts="human-work:conflict human-work:dialogue human-work:rage" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue urn:quote-mcp:concept:human-work:rage" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue https://vocabulary.majerus.us/api/schemes/human-work/slugs/rage" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue urn:quote-mcp:concept:human-work:rage">
+<p>The quotations here are filed under a thesaurus of ideas, and its
+entry for <em>conflict</em> is worth a look. The opposite it records is
+neither <em>peace</em> nor <em>victory</em>. It is <em>dialogue</em>.
+The neighbours it lists for conflict include <em>control</em>,
+<em>stress</em>, and <em>dysfunction</em>; for dialogue,
+<em>cooperation</em>, <em>engagement</em>, and <em>democracy</em>.
+<em>Rage</em> sits beside <em>anger</em>, and no opposite is given for
+it at all.</p>
+</div>
+<h2 id="two-for-one">Two for one</h2>
+<p>A quarrel is already a kind of conversation, because each side is
+answering the other. Tolstoy’s story “A Spark Neglected Burns the House”
+follows two peasant households, once close enough to lend each other a
+sieve or a pail, through a feud that begins over a single hen’s egg. An
+old grandfather, watching from his place on the oven, describes the rule
+his son has been living by:</p>
+<!-- quote 853 human-work:conflict -->
+<div class="iasp-quote" data-quote-id="853" data-work-key="quote:746" data-quote-locator="chap. A Spark Neglected Burns the House" data-concepts="human-work:conflict human-work:retribution" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:retribution" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/retribution" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:retribution" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>You say one unkind word to me and I will reply with two. You will
+give me one slap in the face, and I will retaliate with two slaps. No,
+my son; Christ did not teach us foolish people to act in such a way.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="citation" data-cites="tolstoy2022greatest">(<a href="#ref-tolstoy2022greatest" role="doc-biblioref">Tolstoy 2022</a>, “A Spark Neglected Burns the
+House”)</span></p>
+</blockquote>
+</div>
+<!-- quote 854 human-work:conflict human-work:rage -->
+<div class="iasp-quote" data-quote-id="854" data-work-key="quote:746" data-quote-locator="chap. A Spark Neglected Burns the House" data-concepts="human-work:conflict human-work:punishment human-work:rage" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:punishment urn:quote-mcp:concept:human-work:rage" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/punishment https://vocabulary.majerus.us/api/schemes/human-work/slugs/rage" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:punishment urn:quote-mcp:concept:human-work:rage" vocab="http://www.w3.org/2004/02/skos/core#">
+<p>The neighbours spend six years taking each other to court, and the
+verdicts settle nothing. “The success of either in having the other
+punished only served to increase their rage against each other, until
+they were like mad dogs in their warfare” <span class="citation" data-cites="tolstoy2022greatest">(<a href="#ref-tolstoy2022greatest" role="doc-biblioref">Tolstoy 2022</a>, “A Spark Neglected Burns the
+House”)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> That is the trouble with victory as
+a cure. A verdict is one more message in the same exchange, and the
+loser answers it.</p>
+</div>
+<p>What turns talk into this? Martin Luther King Jr., writing after he
+had toured Watts in the days following the 1965 riot, refused to treat
+the violence as noise:</p>
+<!-- quote 855 human-work:conflict human-work:dialogue -->
+<div class="iasp-quote" data-quote-id="855" data-work-key="quote:747" data-quote-locator="chap. IV" data-concepts="human-work:conflict human-work:dialogue" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>A riot is at bottom the language of the unheard. It is the desperate,
+suicidal cry of one who is so fed up with the powerlessness of his cave
+existence that he asserts that he would rather be dead than ignored.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> <span class="citation" data-cites="king2010where">(<a href="#ref-king2010where" role="doc-biblioref">King 2010, chap. IV</a>)</span></p>
+</blockquote>
+</div>
+<!-- quote 856 human-work:conflict human-work:dialogue -->
+<div class="iasp-quote" data-quote-id="856" data-work-key="quote:748" data-quote-locator="chap. III" data-concepts="human-work:conflict human-work:dialogue human-work:rage" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue urn:quote-mcp:concept:human-work:rage" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue https://vocabulary.majerus.us/api/schemes/human-work/slugs/rage" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue urn:quote-mcp:concept:human-work:rage" vocab="http://www.w3.org/2004/02/skos/core#">
+<p>Hannah Arendt, in “On Violence,” defines the same act in passing as
+“violence—acting without argument or speech and without counting the
+consequences” <span class="citation" data-cites="arendt1972crises">(<a href="#ref-arendt1972crises" role="doc-biblioref">Arendt 1972</a>, “On
+Violence,” pt. III)</span>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> King hears violence as
+speech from people nobody listened to. Arendt sees it as the point where
+speech has been given up. On either account the same thing has gone
+missing: somebody stopped being heard, and blows went on saying what
+words had failed to.</p>
+</div>
+<h2 id="going-to-the-other-person">Going to the other person</h2>
+<p>If that is right, the opposite of conflict has to involve hearing,
+and hearing has a cost. Thich Nhat Hanh is blunt about where the cost
+falls:</p>
+<!-- quote 857 human-work:dialogue human-work:compassion -->
+<div class="iasp-quote" data-quote-id="857" data-work-key="quote:749" data-quote-locator="chap. What Prevents Us from Being Happy?" data-concepts="human-work:compassion human-work:conflict human-work:dialogue" data-concept-uris="urn:quote-mcp:concept:human-work:compassion urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/compassion https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue" about="urn:quote-mcp:concept:human-work:compassion urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>When we begin to see that our “enemy” is suffering, that is the
+beginning of insight. When we see in ourself the wish that the other
+person stop suffering, that is a sign of real love. But be careful.
+Sometimes we may think that we’re stronger than we actually are. To test
+our real strength, we try going to the other person to listen and talk
+to him or her.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="citation" data-cites="hanh2011reconciliation">(<a href="#ref-hanh2011reconciliation" role="doc-biblioref">Hanh 2011, chap.
+7</a>)</span></p>
+</blockquote>
+</div>
+<p>Compassion held at a distance is untested. The test is the walk, and
+the walk is the subject of the <em>Iliad</em>’s last book. Achilles has
+killed Hector, and each daybreak he drags the body round the tomb of his
+own dead friend. Hector’s father, the old king Priam, crosses the lines
+at night to ask for his son. In Samuel Butler’s prose translation:</p>
+<!-- quote 858 human-work:conflict human-work:dialogue -->
+<div class="iasp-quote" data-quote-id="858" data-work-key="quote:750" data-quote-locator="chap. BOOK XXIV" data-concepts="human-work:conflict human-work:dialogue" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>King Priam entered without their seeing him, and going right up to
+Achilles he clasped his knees and kissed the dread murderous hands that
+had slain so many of his sons.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> <span class="citation" data-cites="homer2021complete">(<a href="#ref-homer2021complete" role="doc-biblioref">Homer 2021</a>, <em>Iliad</em> bk. XXIV)</span></p>
+</blockquote>
+</div>
+<p>He asks Achilles to think of his own father, who is as old as Priam
+and far away. What follows is no negotiation.</p>
+<!-- quote 859 human-work:dialogue human-work:compassion -->
+<div class="iasp-quote" data-quote-id="859" data-work-key="quote:750" data-quote-locator="chap. BOOK XXIV" data-concepts="human-work:compassion human-work:dialogue" data-concept-uris="urn:quote-mcp:concept:human-work:compassion urn:quote-mcp:concept:human-work:dialogue" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/compassion https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue" about="urn:quote-mcp:concept:human-work:compassion urn:quote-mcp:concept:human-work:dialogue" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>Thus spoke Priam, and the heart of Achilles yearned as he bethought
+him of his father. He took the old man’s hand and moved him gently away.
+The two wept bitterly – Priam, as he lay at Achilles’ feet, weeping for
+Hector, and Achilles now for his father and now for Patroclus, till the
+house was filled with their lamentation.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>
+<span class="citation" data-cites="homer2021complete">(<a href="#ref-homer2021complete" role="doc-biblioref">Homer 2021</a>,
+<em>Iliad</em> bk. XXIV)</span></p>
+</blockquote>
+</div>
+<p>Notice what the two men leave undone. They reach no agreement about
+the war. Neither apologises, and nobody forgives. They weep in the same
+room for different people, and each recognises the shape of the other’s
+grief. Then Achilles has the body washed and wrapped, lifts it onto the
+bier himself, and insists that the old man eat.</p>
+<!-- quote 860 human-work:dialogue human-work:respect -->
+<div class="iasp-quote" data-quote-id="860" data-work-key="quote:750" data-quote-locator="chap. BOOK XXIV" data-concepts="human-work:dialogue human-work:respect" data-concept-uris="urn:quote-mcp:concept:human-work:dialogue urn:quote-mcp:concept:human-work:respect" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue https://vocabulary.majerus.us/api/schemes/human-work/slugs/respect" about="urn:quote-mcp:concept:human-work:dialogue urn:quote-mcp:concept:human-work:respect" vocab="http://www.w3.org/2004/02/skos/core#">
+<p>After the meal Homer gives them a moment that the earlier books have
+made almost unimaginable: “Priam, descendant of Dardanus, marvelled at
+the strength and beauty of Achilles for he was as a god to see, and
+Achilles marvelled at Priam as he listened to him and looked upon his
+noble presence” <span class="citation" data-cites="homer2021complete">(<a href="#ref-homer2021complete" role="doc-biblioref">Homer 2021</a>, <em>Iliad</em> bk. XXIV)</span>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> <em>As he listened to him.</em> Only
+then do they settle something practical. Priam asks for eleven days to
+mourn and bury his son, and Achilles gives his word to hold back the
+fighting that long.</p>
+</div>
+<h2 id="what-a-supper-can-and-cannot-do">What a supper can and cannot
+do</h2>
+<p>John Paul Lederach, writing for people who work on conflicts for a
+living, makes the claim for dialogue at exactly the strength the poem
+supports:</p>
+<!-- quote 861 human-work:dialogue human-work:conflict -->
+<div class="iasp-quote" data-quote-id="861" data-citekey="lederach2015little" data-work-key="zotero:users/827407/8B24M9BD" data-quote-locator="chap. 3" data-concepts="human-work:conflict human-work:dialogue" data-concept-uris="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" data-concept-terms="https://vocabulary.majerus.us/api/schemes/human-work/slugs/conflict https://vocabulary.majerus.us/api/schemes/human-work/slugs/dialogue" about="urn:quote-mcp:concept:human-work:conflict urn:quote-mcp:concept:human-work:dialogue" vocab="http://www.w3.org/2004/02/skos/core#">
+<blockquote>
+<p>Dialogue is essential to justice and peace on both an interpersonal
+and a structural level. It is not the only mechanism, but it is an
+essential one.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> <span class="citation" data-cites="lederach2015little">(<a href="#ref-lederach2015little" role="doc-biblioref">Lederach 2015, chap. 3</a>)</span></p>
+</blockquote>
+</div>
+<div class="note usage" epub:type="note" data-iasp-delivery="note" data-iasp-modifiers="usage" data-iasp-concepts="urn:iasp:concept:note urn:iasp:concept:usage" data-iasp-terms="https://vocabulary.majerus.us/api/schemes/iasp/slugs/note https://vocabulary.majerus.us/api/schemes/iasp/slugs/usage" vocab="http://www.w3.org/2004/02/skos/core#" typeof="Concept" resource="urn:iasp:concept:usage">
+<p><strong>Before the next reply.</strong> Tolstoy’s grandfather and
+Homer’s king point to the same small experiment. In a quarrel that has
+started doubling, skip one turn of the exchange. Go to the other person
+instead of writing to them. Ask what the dispute has cost them, and say
+what it has cost you. Leave the settlement for another day, and eat
+something together if you can. Priam and Achilles agreed on almost
+nothing, and the meeting still counted.</p>
+</div>
+<div class="note scope" epub:type="note" data-iasp-delivery="note" data-iasp-modifiers="scope" data-iasp-concepts="urn:iasp:concept:note urn:iasp:concept:scope" data-iasp-terms="https://vocabulary.majerus.us/api/schemes/iasp/slugs/note https://vocabulary.majerus.us/api/schemes/iasp/slugs/scope" vocab="http://www.w3.org/2004/02/skos/core#" typeof="Concept" resource="urn:iasp:concept:scope">
+<p>The supper does not end the war. The truce is for a funeral, and
+Priam himself allows that on the twelfth day the fighting may begin
+again. Even inside the tent the peace is thin: Achilles has the body
+washed out of Priam’s sight, for fear that the father’s grief would
+provoke him into killing the old man. And the meeting happened only
+because one side carried the whole risk and the other chose to let him
+in. King’s passage is the reminder that people who have been shut out
+cannot be asked to supply the dialogue alone. Lederach’s second sentence
+is the careful one. Dialogue is essential, and it is not the only thing
+needed.</p>
+</div>
+<p>The poem that opens with two men falling out comes to rest with two
+men at a table and the war unfinished outside. Homer makes no larger
+claim for the supper than eleven days. He shows only that the rage,
+which killing Hector had not satisfied, stopped there for as long as one
+man listened to another.</p>
+<div class="note disclosure" epub:type="note" data-iasp-delivery="note" data-iasp-modifiers="disclosure" data-iasp-concepts="urn:iasp:concept:note urn:iasp:concept:disclosure" data-iasp-terms="https://vocabulary.majerus.us/api/schemes/iasp/slugs/note https://vocabulary.majerus.us/api/schemes/iasp/slugs/disclosure" vocab="http://www.w3.org/2004/02/skos/core#" typeof="Concept" resource="urn:iasp:concept:disclosure">
+<p><strong>How this essay was made.</strong> Claude, an AI model,
+drafted this essay for John Majerus from books and reading notes in his
+library. Nine of the ten quotations (Tolstoy, King, Arendt, Thich Nhat
+Hanh, Lederach, and the three from Butler’s <em>Iliad</em>) were checked
+word for word against the e-book files before they were saved. The
+opening lines in Fagles’s translation are his earlier transcription from
+the print edition and were not rechecked. Simone Weil’s essay is cited
+from a catalogue record alone; no copy of it was consulted. The
+footnotes say which is which.</p>
+</div>
+<h2 id="references">References</h2>
+</section>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-arendt1972crises" class="csl-entry" role="listitem">
+Arendt, Hannah. 1972. <em>Crises of the Republic: Lying in Politics,
+Civil Disobedience, on Violence, Thoughts on Politics and
+Revolution</em>. Houghton Mifflin Harcourt.
+</div>
+<div id="ref-hanh2011reconciliation" class="csl-entry" role="listitem">
+Hanh, Thich Nhat. 2011. <em>Reconciliation</em>. Parallax Press.
+</div>
+<div id="ref-homer1990iliad" class="csl-entry" role="listitem">
+Homer. 1990. <em>The Iliad</em>. Penguin.
+</div>
+<div id="ref-homer2021complete" class="csl-entry" role="listitem">
+———. 2021. <em>Complete Works of Homer. Illustrated: The Iliad, the
+Odyssey, the Homeric Hymns</em>. Strelbytskyy Multimedia Publishing.
+</div>
+<div id="ref-king2010where" class="csl-entry" role="listitem">
+King, Martin Luther Jr. 2010. <em>Where Do We Go from Here (King
+Legacy)</em>. Beacon Press.
+</div>
+<div id="ref-lederach2015little" class="csl-entry" role="listitem">
+Lederach, John. 2015. <em>Little Book of Conflict Transformation: Clear
+Articulation of the Guiding Principles by a Pioneer in the Field (the
+Little Books of Justice and Peacebuilding Series)</em>. Good Books.
+</div>
+<div id="ref-tolstoy2022greatest" class="csl-entry" role="listitem">
+Tolstoy, Leo. 2022. <em>The Greatest Short Stories of Leo Tolstoy</em>.
+</div>
+<div id="ref-weil1956iliad" class="csl-entry" role="listitem">
+Weil, S. 1956. <em>The Iliad: Or, the Poem of Force</em>. Pendle Hill.
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Homer, <em>The Iliad</em>, translated by Robert Fagles
+(Penguin, 1990), the opening lines of Book 1. Transcribed from the print
+edition as running prose, without the line breaks of the verse; no page
+number was recorded.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Leo Tolstoy, “A Spark Neglected Burns the House,” in
+<em>The Greatest Short Stories of Leo Tolstoy</em> (e-book edition,
+2022). Checked against the e-book, which has no page numbers, so it is
+cited by story title. The speaker is the grandfather, addressing his son
+Ivan.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The same story, a few pages earlier. Checked against the
+e-book.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Martin Luther King Jr., <em>Where Do We Go from
+Here</em> (Beacon Press, 2010 edition), chapter IV, “The Dilemma of
+Negro Americans.” Checked against the e-book and cited by chapter.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Hannah Arendt, “On Violence,” part III, in <em>Crises of
+the Republic</em> (Houghton Mifflin Harcourt, 1972). Checked against the
+e-book and cited by essay and part. The words are part of a longer
+sentence in which Arendt grants that such action is sometimes the only
+remedy for an injustice; they are quoted here for the description
+alone.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Thich Nhat Hanh, <em>Reconciliation</em> (Parallax
+Press, 2011), chapter 7, “Reconciliation.” Checked against the e-book
+and cited by chapter.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Homer, <em>Iliad</em>, Book XXIV, in Samuel Butler’s
+prose translation, as collected in <em>Complete Works of Homer</em>
+(Strelbytskyy Multimedia Publishing, 2021). Checked against the e-book
+and cited by book.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>The same book and translation. Checked against the
+e-book.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>The same book and translation, after the meal. Checked
+against the e-book.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>John Paul Lederach, <em>The Little Book of Conflict
+Transformation</em> (Good Books, 2015), chapter 3, “Defining Conflict
+Transformation.” Checked against the e-book and cited by chapter.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

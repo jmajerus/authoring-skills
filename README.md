@@ -35,8 +35,8 @@ keys, and page numbers. Each skill folder reaches it through a `library.md` syml
 skill's folder. portal-article needs no script: iasp-mcp compares every marked quote with the quote store and builds
 the bibliography when it validates and renders.
 
-[examples/cited-article/](examples/cited-article/) holds a finished cited-article piece with its saved quotes.
-`node --test` runs the checker over each example, and checks that every skill folder has a well-formed `SKILL.md`
+[examples/](examples/) holds finished pieces by skill, each with its quotes' saved text: one from cited-article,
+and two portal-article essays with their iasp-mcp renders. `node --test` runs the checker over each example, and checks that every skill folder has a well-formed `SKILL.md`
 whose links resolve.
 
 [tools-used.json](tools-used.json) lists the MCP tools the skills call, by service. The suite's ops server
