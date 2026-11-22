@@ -1,7 +1,7 @@
 {
   "holdings-mcp": ["find_work", "get_work", "status"],
   "corpus-mcp": ["search_corpus", "read_book", "get_book_outline", "cite_passage", "pin_citekey", "list_shelves", "list_books", "status"],
-  "quote-mcp": ["search_quotes", "get_quote", "get_concept", "list_concepts", "add_quote", "cite_quote"],
+  "quote-mcp": ["search_quotes", "get_quote", "get_concept", "list_concepts", "add_quote", "cite_quote", "propose_quote_fix"],
   "terminology-mcp": ["search_terms", "get_term", "get_graph", "list_sets"],
   "zotero-mcp": ["zotero_search_items", "zotero_get_item_metadata", "zotero_add_item", "zotero_update_item", "zotero_write_capabilities"],
   "iasp-mcp": ["get_authoring_guide", "validate_markdown", "render_document"]
