@@ -1,6 +1,6 @@
 ---
 name: book-review
-description: Write a review of one book from the owner's library through the Authoring Portal MCP servers (holdings, corpus, quote, terminology, zotero, iasp). Plans the reading against the context budget, reads the book in passes, tests it against its own title, finds comparison works elsewhere in the library, saves the words the review quotes as verified citations, files the books to Zotero staging, marks the review up with IASP blocks, and renders it to Ghost, HTML, Markdown, PDF, and EPUB. Use this whenever the session has the portal's tools (names ending in find_work, read_book, add_quote, render_document) and the person asks for a review, critique, assessment, or verdict on a particular book they hold, for a blog or otherwise, even if they never say "skill". For an essay on a topic drawn from many books, use portal-article; to collect a book's passages for the owner's quote store, quote-harvest.
+description: Write a review of one book from the owner's library through the Authoring Portal MCP servers (holdings, corpus, quote, terminology, zotero, iasp). Plans the reading against the context budget, reads the book in passes, tests it against its own title, finds comparison works elsewhere in the library, saves the words the review quotes as citations (verified against the e-book, or transcribed from a paper book), files the books to Zotero staging, marks the review up with IASP blocks, and renders it to Ghost, HTML, Markdown, PDF, and EPUB. Use this whenever the session has the portal's tools (names ending in find_work, read_book, add_quote, render_document) and the person asks for a review, critique, assessment, or verdict on a particular book they hold, for a blog or otherwise, even if they never say "skill". For an essay on a topic drawn from many books, use portal-article; to collect a book's passages for the owner's quote store, quote-harvest.
 ---
 
 # Book review
@@ -38,7 +38,7 @@ unless the owner's transcribed quotes from a paper copy are enough for what they
 (usually within the first dozen file pages) and write down each part and chapter with the
 file page it starts on. Compare one or two printed numbers with the `page_label` `read_book`
 shows for the same page: if they disagree by a constant (the contents says 15, the page label
-says 16), note the offset now. It matters in step 5.
+says 16), note the offset now. It matters in step 6.
 
 Then plan against your context budget, before reading anything long. `read_book` returns at
 most 40,000 characters a call, which is roughly 15 to 20 pages of a dense book; a 250-page book
