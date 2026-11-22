@@ -60,6 +60,7 @@ author's hosted services or rights to third-party works quoted in the examples.
 
 ## Keeping in step with the servers
 
-holdings-mcp checks every ten minutes that each server still lists the tools these skills call
-(`TOOLS_SKILLS_USE` in its `src/tools.ts`, the `tools-skills-use` check). When a skill starts or stops calling a
-tool, change that list in the same piece of work.
+authoring-ops-mcp reads [tools-used.json](tools-used.json), copied in at the ref it pins, and on each poll compares
+it with every service's tool listing. A tool a service no longer lists is a failing finding; a tool a `SKILL.md`
+names that tools-used.json leaves out is reported as drift. When a skill starts or stops calling a tool, change
+tools-used.json in the same piece of work.
