@@ -1,6 +1,6 @@
 ---
 name: portal-article
-description: Write a standalone article or essay from the owner's own library through the Authoring Portal MCP servers (holdings, corpus, quote, terminology, zotero, iasp). Finds a topic the library can support, mixes passages checked against e-book text with quotes already transcribed from paper books, files uncatalogued books to Zotero staging, marks the piece up with IASP blocks, and renders it to HTML, Markdown, Ghost, PDF, and EPUB. Use this whenever the session has the portal's tools (names ending in find_work, search_corpus, add_quote, cite_quote, render_document) and the person asks for an article, essay, blog post, or demonstration piece drawn from their books, quotes, or reading notes, even if they name no topic and never say "skill". For a piece that only needs Corpus and Quote tools and local Pandoc, cited-article is enough.
+description: Write a standalone article or essay from the owner's own library through the Authoring Portal MCP servers (holdings, corpus, quote, terminology, zotero, iasp). Finds a topic the library can support, mixes passages checked against e-book text with quotes already transcribed from paper books, files uncatalogued books to Zotero staging, marks the piece up with IASP blocks, and renders it to HTML, Markdown, Ghost, PDF, and EPUB. Use this whenever the session has the portal's tools (names ending in find_work, search_corpus, add_quote, cite_quote, render_document) and the person asks for an article, essay, blog post, or demonstration piece drawn from their books, quotes, or reading notes, even if they name no topic and never say "skill". For a review of one book, use book-review. For a piece that only needs Corpus and Quote tools and local Pandoc, cited-article is enough.
 ---
 
 # Portal article
@@ -27,11 +27,11 @@ search your tool list for the last word before giving up.
 | quote | What has been quoted, and is it verified? | `search_quotes`, `get_concept`, `list_concepts`, `add_quote`, `cite_quote` |
 | terminology | How do the concepts relate? | `search_terms`, `get_term` |
 | zotero | Is the work catalogued? | `zotero_search_items`, `zotero_add_item`, `zotero_get_item_metadata` |
+| iasp | What is each block doing, is every quote intact, and how does it render? | `get_authoring_guide`, `validate_markdown`, `render_document` |
 
 The holdings server checks every ten minutes that each server still lists these tools
 (`TOOLS_SKILLS_USE` in holdings-mcp's `src/tools.ts`). If you change which tools this skill
 calls, change that list too.
-| iasp | What is each block doing, is every quote intact, and how does it render? | `get_authoring_guide`, `validate_markdown`, `render_document` |
 
 Three kinds of holding matter, because they decide how far a quote can be trusted:
 
@@ -89,6 +89,13 @@ smaller set, and a way to change topic. Say that nothing has been saved yet.
 
 This is the one decision that is theirs: quotes saved to the store and books filed to Zotero
 are additions to their records. Everything after it you can carry through without asking.
+
+**Citations are not collected passages.** The quotes you save are saved because the essay
+cites them. They are citations, evidence for points in one piece, not additions to the
+owner's collection of passages worth keeping. That choice is the owner's, so propose none of
+them for the collection, not even a shortlist: a shortlist is a filter, and you would still
+be choosing what is interesting. (quote-harvest is the exception: there the owner asked for
+proposals.)
 
 ## 4. Secure the quotes
 
@@ -159,7 +166,11 @@ add a fact from general knowledge, list it in the handover so the owner can chec
 **Quotes**
 
 - Put `<!-- quote <id> -->` on the line before every block quote, and before any paragraph
-  that quotes inside a sentence. Concept tags may follow the id.
+  that quotes inside a sentence. Concept tags may follow the id. When one paragraph quotes
+  two saved quotes, put each marker on its own line before it. An iasp server older than
+  this rule checks only the last marker against the paragraph and the others against
+  nothing; if `validate_markdown` reports a quote with an empty passage, split the paragraph
+  so each has its own marker.
 - Use `cite_quote`'s `quote` text unchanged. You may quote a run of it, or runs joined by "…";
   never change a word.
 - End a block quote with its citation on a final `>` line.
@@ -245,6 +256,8 @@ Start with one line saying who the essay is written for. Then, briefly:
 
 - the link to read first, the source to edit, and the links to the PDF and EPUB
 - each quote: source, place, citekey, and verified or transcribed
+- the quotes saved for this piece, by id and project tag, said plainly as citations saved for
+  the essay, with none of them proposed for the collection
 - what was filed to Zotero staging and what needs review there
 - decisions you made on their behalf (byline, citation form, file location)
 - facts in the essay that came from your general knowledge, not their books

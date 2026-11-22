@@ -13,6 +13,8 @@ agents need the files and dependencies in the environment where the agent runs.
 - Keep a checkout of this repository on the machine where the agent runs.
 - `portal-article` uses the holdings, corpus, quote, terminology, zotero, and
   iasp MCP servers, all available through the single portal connection below.
+- `book-review` uses the same six servers as `portal-article` and follows several
+  of its steps, so install `portal-article` beside it.
 - `cited-article` uses corpus and quote, and its default Zotero filing workflow
   also uses zotero. Node.js runs its draft checker; Pandoc with citeproc is
   needed for automated checking and formatted output. See the skill for its
@@ -65,7 +67,7 @@ table; use an absolute path for a project directory.
 ```bash
 skill_dir="$HOME/.claude/skills"
 mkdir -p "$skill_dir"
-for skill in portal-article cited-article source-survey draft-check \
+for skill in portal-article book-review cited-article source-survey draft-check \
   quote-harvest concept-dossier counter-reading reading-gaps; do
   if [ -e "$skill_dir/$skill" ] || [ -L "$skill_dir/$skill" ]; then
     printf 'Already exists: %s\n' "$skill_dir/$skill"

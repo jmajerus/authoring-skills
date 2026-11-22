@@ -6,6 +6,7 @@ The skills an agent follows to write from the library through the Authoring MCP 
 | Skill | For |
 |---|---|
 | [portal-article](portal-article/SKILL.md) | A standalone essay through all six servers, rendered by iasp-mcp to HTML, Markdown, Ghost, PDF, and EPUB |
+| [book-review](book-review/SKILL.md) | A review of one book, read in planned passes and compared with others in the library, rendered by iasp-mcp like portal-article |
 | [cited-article](cited-article/SKILL.md) | An article or chapter that needs only the corpus and quote servers, built with local Pandoc |
 
 ## Research aids
@@ -21,7 +22,7 @@ For a writer who does the writing themselves. Each hands back a report, and all 
 | [counter-reading](counter-reading/SKILL.md) | Who in my library argues against this? | The case against a claim, read in context, or a plain statement that the library holds none |
 | [reading-gaps](reading-gaps/SKILL.md) | What am I missing on this topic? | Works held but not citable, never quoted, or without text, and works the owner's books cite that are not held |
 
-[shared/library.md](shared/library.md) is what these six have in common: the tools, the three kinds of holding,
+[shared/library.md](shared/library.md) is what these six (and book-review) have in common: the tools, the three kinds of holding,
 keys, and page numbers. Each skill folder reaches it through a `library.md` symlink.
 
 ## Smaller models
