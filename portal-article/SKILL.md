@@ -29,9 +29,9 @@ search your tool list for the last word before giving up.
 | zotero | Is the work catalogued? | `zotero_search_items`, `zotero_add_item`, `zotero_get_item_metadata` |
 | iasp | What is each block doing, is every quote intact, and how does it render? | `get_authoring_guide`, `validate_markdown`, `render_document` |
 
-The holdings server checks every ten minutes that each server still lists these tools
-(`TOOLS_SKILLS_USE` in holdings-mcp's `src/tools.ts`). If you change which tools this skill
-calls, change that list too.
+The suite's ops server checks that each service still lists these tools, from the
+repository's `tools-used.json`. If you change which tools this skill calls, change that file
+too.
 
 Three kinds of holding matter, because they decide how far a quote can be trusted:
 
